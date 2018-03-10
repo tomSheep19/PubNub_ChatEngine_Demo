@@ -1,0 +1,86 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+        }
+
+        #log {
+            height: 250px;
+            overflow-y: auto;
+        }
+        #buttonGroup{
+            text-align: center;
+        }
+        #randomButton {
+            text-align: center;
+            align-content: center;
+        }
+        #header{
+            text-align: center;
+        }
+        #randomPickSettings{
+            text-align: center;
+            margin-top: 330px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-header" id ="header">
+    <h1>Random Pick Chat room </h1>
+    <footer>Supported by Pub Nub Chat Engine</footer>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="list-group" id="log"></div>
+            <input type="text" class="form-control" id="message" placeholder="Your message here...">
+            <br>
+        </div>
+        <div id="randomPickSettings">
+            Sex
+            <select id="Sex" class="selectBox">
+                <option>Default</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <br>
+            <br>
+            Age
+
+            <select id="Age" class="selectBox">
+                <option>Default</option>
+                <option>18-25</option>
+                <option>26-35</option>
+                <option>36-45</option>
+                <option>...</option>
+            </select>
+            <br>
+            <br>
+            Hobby
+
+            <select id="Hobby" class="selectBox">
+                <option>Default</option>
+                <option>Coding</option>
+                <option>Watching Films</option>
+                <option>Outdoor sports</option>
+                <option>Math</option>
+                <option></option>
+            </select>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="buttonGroup">
+            <button type="button" id="randomButton" class="btn btn-primary btn-lg">Start Anonymous Chat!</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="node_modules/chat-engine/dist/chat-engine.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
