@@ -39,14 +39,28 @@ ChatEngine.on('$.ready', (data) => {
 
     let chat = new ChatEngine.Chat('new-chat');
 
+    chat.on('$.online.here', (payload) => {
+        if (payload.user.uuid != first && payload.user.uuid != second) {
+            return;
+        }
+        appendMessage('Status', payload.user.uuid + ' is in the channel!');
+    });
+
+    chat.on('$.online.join', (payload) => {
+        if (payload.user.uuid != first && payload.user.uuid != second) {
+            return;
+        }
+        appendMessage('Status', payload.user.uuid + ' has come online!');
+    });
+
+
     chat.on('message', (payload) => {
         console.log(payload);
-        if(payload.sender.uuid!= first && payload.sender.uuid!=second){
-            return ;
+        if (payload.sender.uuid != first && payload.sender.uuid != second) {
+            return;
         }
         appendMessage(payload.sender.uuid, payload.data.text, "black");
     });
-
 
 
     $("#message").keypress(function (event) {

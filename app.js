@@ -2,7 +2,7 @@ const ChatEngine = ChatEngineCore.create({
     publishKey: 'pub-c-261ef9c7-14f5-4054-ba58-8e4b1b2a5df6',
     subscribeKey: 'sub-c-facd2856-23f1-11e8-a8f3-22fca5d72012'
 });
-
+var blockedFisrt = null, blockedSecond = null;
 const getUsername = () => {
     const usrs = ['SpiderMan', 'Yang', 'Thor', 'BlackWidow', 'CaptainMarvel', 'Medusa', 'IronMan', 'Hulk'];
     return usrs[Math.floor(Math.random() * usrs.length)];
@@ -36,19 +36,31 @@ ChatEngine.on('$.ready', (data) => {
 
 
     chat.on('$.connected', (payload) => {
+        if (me.uuid == blockedSecond || me.uuid == blockedFisrt) {
+            return;
+        }
         appendMessage(me.uuid, 'Connected to chat!');
     });
 
     chat.on('$.online.here', (payload) => {
+        if (payload.user.uuid == blockedFisrt || payload.user.uuid == blockedSecond) {
+            return;
+        }
         appendMessage('Status', payload.user.uuid + ' is in the channel!');
     });
 
     chat.on('$.online.join', (payload) => {
+        if (payload.user.uuid == blockedFisrt || payload.user.uuid == blockedSecond) {
+            return;
+        }
         appendMessage('Status', payload.user.uuid + ' has come online!');
     });
 
     chat.on('message', (payload) => {
         console.log(payload);
+        if (payload.sender.uuid == blockedSecond || payload.sender.uuid == blockedFisrt) {
+            return;
+        }
         appendMessage(payload.sender.uuid, payload.data.text);
     });
 
@@ -90,10 +102,11 @@ ChatEngine.on('$.ready', (data) => {
 
             //initiate newChat
             alert("Found! Your peer now is: " + pickedUsr);
-
+            blockedFisrt = pickedUsr;
+            blockedSecond = me.uuid;
             //Encede the peers' name
-            var encodedName =  pickedUsr+ "+" + me.uuid;
-            var win = window.open('randomlyPickedChat.html?'+encodedName);
+            var encodedName = pickedUsr + "+" + me.uuid;
+            var win = window.open('randomlyPickedChat.html?' + encodedName);
             if (win) {
                 //Browser has allowed it to be opened
                 win.focus();
