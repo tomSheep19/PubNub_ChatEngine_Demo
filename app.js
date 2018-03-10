@@ -5,7 +5,7 @@ const ChatEngine = ChatEngineCore.create({
 
 
 const getUsername = () => {
-    const usrs = ['Spider Man', 'Yang', 'Thor', 'Black Widow', 'Captain Marvel', 'Medusa', 'Iron Man', 'Hulk'];
+    const usrs = ['SpiderMan', 'Yang', 'Thor', 'BlackWidow', 'CaptainMarvel', 'Medusa', 'IronMan', 'Hulk'];
     return usrs[Math.floor(Math.random() * usrs.length)];
 };
 
@@ -15,7 +15,7 @@ const getColor = () => {
 };
 
 
-const appendMessage = (username, text, color) => {
+const appendMessage = (username, text) => {
     let message =
         $(`<div class="list-group-item" />`)
             .append($('<strong>').text(username + ': '))
@@ -37,7 +37,7 @@ ChatEngine.on('$.ready', (data) => {
 
 
     chat.on('$.connected', (payload) => {
-        appendMessage(me.uuid, 'Connected to chat!', "black");
+        appendMessage(me.uuid, 'Connected to chat!');
     });
 
     chat.on('$.online.here', (payload) => {
@@ -50,6 +50,7 @@ ChatEngine.on('$.ready', (data) => {
     });
 
     chat.on('message', (payload) => {
+        console.log(payload);
         appendMessage(payload.sender.uuid, payload.data.text, "black");
     });
 
@@ -76,24 +77,29 @@ ChatEngine.on('$.ready', (data) => {
     $("#randomButton").click(function () {
         var curUsers = chat.users;
         var nameSet = [], i = 0;
-        var length = nameSet.length;
+
         var pickedUsr;
         for (var obj in curUsers) {
             nameSet[i] = obj;
             i++;
-            //console.log(obj);
         }
-        if (length == 1) {
+        console.log(nameSet);
+        var length = nameSet.length;
+        if (length <= 1) {
             alert("Currently no matches in this chat room. Please Wait :)");
         } else {
             //Continuing to select until find sb not ME
-            while (pickedUsr != me.uuid) {
-                pickedUsr = Math.floor(Math.random() * length);
+            pickedUsr = nameSet[Math.floor(Math.random() * length)];
+            while (pickedUsr == me.uuid) {
+                pickedUsr = nameSet[Math.floor(Math.random() * length)];
             }
 
             //initiate newChat
-            /*
-            var win = window.open('randomlyPickedChat.html');
+            alert("Found! Your peer now is: " + pickedUsr);
+
+            //Encede the peers' name
+            var encodedName = me.uuid + "+" + pickedUsr;
+            var win = window.open('randomlyPickedChat.html?'+encodedName);
             if (win) {
                 //Browser has allowed it to be opened
                 win.focus();
@@ -101,27 +107,10 @@ ChatEngine.on('$.ready', (data) => {
                 //Browser has blocked it
                 alert('Please allow popups for this website');
             }
-            */
-
-            //console.log(nameSet[pickedUsr]);
 
 
         }
 
-        //console.log(array);
-        //console.log(curUsers);
-
-        //var len = curUsers.size();
-        //console.log(curUsers);
-        //console.log(chat);
-        /*
-        array =[];
-
-        for (i = 0; i < len; i++) {
-            array.append(curUsers[i]);
-        }
-        console.log(curUsers);
-        */
     })
 
 });
