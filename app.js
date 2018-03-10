@@ -3,7 +3,6 @@ const ChatEngine = ChatEngineCore.create({
     subscribeKey: 'sub-c-facd2856-23f1-11e8-a8f3-22fca5d72012'
 });
 
-
 const getUsername = () => {
     const usrs = ['SpiderMan', 'Yang', 'Thor', 'BlackWidow', 'CaptainMarvel', 'Medusa', 'IronMan', 'Hulk'];
     return usrs[Math.floor(Math.random() * usrs.length)];
@@ -41,21 +40,16 @@ ChatEngine.on('$.ready', (data) => {
     });
 
     chat.on('$.online.here', (payload) => {
-        appendMessage('Status', payload.user.uuid + ' is in the channel! Their color is ' + payload.user.state.color + '.');
+        appendMessage('Status', payload.user.uuid + ' is in the channel!');
     });
 
     chat.on('$.online.join', (payload) => {
-        appendMessage('Status', payload.user.uuid + ' has come online! Their color is ' + payload.user.state.color + '.', "black");
-        //appendMessage('Status', payload.user.uuid + ' has come online!');
+        appendMessage('Status', payload.user.uuid + ' has come online!');
     });
 
     chat.on('message', (payload) => {
         console.log(payload);
-        appendMessage(payload.sender.uuid, payload.data.text, "black");
-    });
-
-    chat.on('randomButton', (payload) => {
-        console.log(payload);
+        appendMessage(payload.sender.uuid, payload.data.text);
     });
 
 
@@ -98,7 +92,7 @@ ChatEngine.on('$.ready', (data) => {
             alert("Found! Your peer now is: " + pickedUsr);
 
             //Encede the peers' name
-            var encodedName = me.uuid + "+" + pickedUsr;
+            var encodedName =  pickedUsr+ "+" + me.uuid;
             var win = window.open('randomlyPickedChat.html?'+encodedName);
             if (win) {
                 //Browser has allowed it to be opened

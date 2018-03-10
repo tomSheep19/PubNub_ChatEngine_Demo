@@ -5,8 +5,8 @@ const ChatEngine = ChatEngineCore.create({
 var id = window.location.href.split('?').pop();
 var first = id.split('+')[0];
 var second = id.split('+')[1];
-console.log(first);
-console.log(second);
+//console.log(first);
+//console.log(second);
 const getUsername = () => {
     const usrs = ['SpiderMan', 'Yang', 'Thor', 'BlackWidow', 'CaptainMarvel', 'Medusa', 'IronMan', 'Hulk'];
     return usrs[Math.floor(Math.random() * usrs.length)];
@@ -30,7 +30,8 @@ const appendMessage = (username, text) => {
 
 };
 
-let me = ChatEngine.connect(getUsername(), {color: getColor()});
+
+let me = ChatEngine.connect(second, {color: getColor()});
 
 ChatEngine.on('$.ready', (data) => {
 
@@ -38,28 +39,14 @@ ChatEngine.on('$.ready', (data) => {
 
     let chat = new ChatEngine.Chat('new-chat');
 
-
-    chat.on('$.connected', (payload) => {
-        appendMessage(me.uuid, 'Connected to chat!');
-    });
-
-    chat.on('$.online.here', (payload) => {
-        appendMessage('Status', payload.user.uuid + ' is in the channel! Their color is ' + payload.user.state.color + '.');
-    });
-
-    chat.on('$.online.join', (payload) => {
-        appendMessage('Status', payload.user.uuid + ' has come online! Their color is ' + payload.user.state.color + '.', "black");
-        //appendMessage('Status', payload.user.uuid + ' has come online!');
-    });
-
     chat.on('message', (payload) => {
         console.log(payload);
+        if(payload.sender.uuid!= first && payload.sender.uuid!=second){
+            return ;
+        }
         appendMessage(payload.sender.uuid, payload.data.text, "black");
     });
 
-    chat.on('randomButton', (payload) => {
-        console.log(payload);
-    });
 
 
     $("#message").keypress(function (event) {
