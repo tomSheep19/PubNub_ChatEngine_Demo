@@ -2,9 +2,9 @@
 PubNub_ChatEngine_Demo
 #Supperted by Pub Bub Chat Engine SDK
 
-https://www.pubnub.com/products/chatengine/
+SDK and Source: https://www.pubnub.com/products/chatengine/
 
-https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
+Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
 
 Video: https://www.youtube.com/watch?v=77ocoSlIVY4
 
