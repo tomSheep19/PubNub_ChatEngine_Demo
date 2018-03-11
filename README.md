@@ -33,12 +33,22 @@ to invite another user to join the secret channel
 - Video: https://www.youtube.com/watch?v=Wsr_T4riEtA&feature=youtu.be
 
 - Images
+### Multi-Users Chat Room (Named as user A)
 ![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/1.png)
 
+
+
+### Alert: No other users in the Chat Room
 ![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/2.png)
 
+
+
+### New Tab, Private Chat Room (User A)
 ![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/3.png)
 
+
+
+### The guy who is matched (Named as User B)
 ![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/4.png)
 
 
