@@ -20,8 +20,8 @@ Local Test Info:
 - After clicking on the 'Start Anonymous Chat' button, current user's browser would open a new page called 'private-chat'.(implemented)
 - Then by using:
 
-'let secretChat = new ChatEngine.Chat('secret-channel');
-secretChat.invite(someoneElse);'
+`let secretChat = new ChatEngine.Chat('secret-channel'); `
+`secretChat.invite(someoneElse);`
 
 to invite another user to join the secret channel
  
