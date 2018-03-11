@@ -9,9 +9,9 @@ PubNub_ChatEngine_Demo  Randomly Customized Match up chats
 Configure local Apache Server to handle the AJAX request to send selected Sex, Age, Hobby features' value
 
 Local Test Info: 
--Put the folder into local Apache Server
--Copy serverSide.php to Apache Server
--Then start serverSide.php first
+- Put the folder into local Apache Server
+- Copy serverSide.php to Apache Server
+- Then start serverSide.php first
 
 # Info
 SDK and Source: https://www.pubnub.com/products/chatengine/
