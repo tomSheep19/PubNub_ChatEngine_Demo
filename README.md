@@ -30,7 +30,7 @@ to invite another user to join the secret channel
 
 - Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
 
-- Video: https://www.youtube.com/watch?v=Wsr_T4riEtA&feature=youtu.be
+- Video: https://www.youtube.com/watch?v=z5DSEXSlEVs&feature=youtu.be
 
 - Images
 ### Multi-Users Chat Room (Named as user A)
