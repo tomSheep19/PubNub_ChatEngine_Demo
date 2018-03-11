@@ -7,6 +7,9 @@ Randomly Customized Match up chats
 # Updated on Mar 10:
 
 Configure local Apache Server to handle the AJAX request to send selected Sex, Age, Hobby features' value
+
+Local Test Info: Put all the stuff in local Apache Server 
+
 # Info
 SDK and Source: https://www.pubnub.com/products/chatengine/
 
