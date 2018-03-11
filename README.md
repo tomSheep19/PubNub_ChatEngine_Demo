@@ -18,8 +18,13 @@ Local Test Info:
 ### Strategy of creating new Private chat between two selected users:
 
 - After clicking on the 'Start Anonymous Chat' button, current user's browser would open a new page called 'private-chat'.(implemented)
-- Meanwhile, current page (we call index.html) would send a request to PHP server with a json including information of these two user in the new chatroom. (implemented)
-- Then the PHP server would redirect another user's page to this new 'private-chat' room. (implementing)
+- Then by using:
+
+'let secretChat = new ChatEngine.Chat('secret-channel');
+secretChat.invite(someoneElse);'
+
+to invite another user to join the secret channel
+ 
 
 
 
