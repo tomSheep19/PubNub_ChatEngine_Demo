@@ -4,6 +4,10 @@ Randomly Customized Match up chats
 
 #Supperted by Pub Bub Chat Engine SDK
 
+#Updated on Mar 10:
+
+Configure local Apache Server to handle the AJAX request to send selected Sex, Age, Hobby features' value
+
 SDK and Source: https://www.pubnub.com/products/chatengine/
 
 Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
