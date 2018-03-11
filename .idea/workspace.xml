@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d08350b1-5491-4fff-88f0-0ab14638de6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PubNub_ChatEngine_Demo.iml" afterPath="$PROJECT_DIR$/.idea/PubNub_ChatEngine_Demo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serverSide.php" afterPath="$PROJECT_DIR$/serverSide.php" />
@@ -23,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+            <state relative-caret-position="1650">
+              <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -43,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serverSide.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="serverSide.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serverSide.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -315,12 +314,12 @@
       <option name="presentableId" value="Default" />
       <updated>1520668064977</updated>
       <workItem from="1520668066310" duration="1363000" />
-      <workItem from="1520744921117" duration="393000" />
+      <workItem from="1520744921117" duration="1469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1756000" />
+    <option name="totallyTimeSpent" value="2832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -624,10 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/serverSide.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+        <state relative-caret-position="352">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -640,10 +639,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverSide.php">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="1650">
+          <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
           <folding />
         </state>
       </provider>

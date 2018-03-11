@@ -8,11 +8,6 @@ const getUsername = () => {
     return usrs[Math.floor(Math.random() * usrs.length)];
 };
 
-const getColor = () => {
-    const colors = ["red", "orange", "yellow", "green", "blue", "purple", "teal"];
-    return colors[Math.floor(Math.random() * colors.length)];
-};
-
 
 const appendMessage = (username, text) => {
     let message =
@@ -26,7 +21,7 @@ const appendMessage = (username, text) => {
 
 };
 
-let me = ChatEngine.connect(getUsername(), {color: getColor()});
+let me = ChatEngine.connect(getUsername(), null);
 
 ChatEngine.on('$.ready', (data) => {
 
@@ -35,22 +30,29 @@ ChatEngine.on('$.ready', (data) => {
     let chat = new ChatEngine.Chat('new-chat');
 
 
+    chat.on('message', (payload) => {
+        console.log(payload);
+        appendMessage(payload.sender.uuid, payload.data.text);
+    });
+
     chat.on('$.connected', (payload) => {
-        appendMessage(me.uuid, 'Connected to chat!');
+        appendMessage(me.uuid, 'Connected to chat! Welcome!');
     });
 
     chat.on('$.online.here', (payload) => {
         appendMessage('Status', payload.user.uuid + ' is in the channel!');
     });
 
+
     chat.on('$.online.join', (payload) => {
         appendMessage('Status', payload.user.uuid + ' has come online!');
     });
 
-    chat.on('message', (payload) => {
-        console.log(payload);
-        appendMessage(payload.sender.uuid, payload.data.text);
-    });
+    Array.prototype.remove = function (from, to) {
+        var rest = this.slice((to || from) + 1 || this.length);
+        this.length = from < 0 ? this.length + from : from;
+        return this.push.apply(this, rest);
+    };
 
 
     $("#message").keypress(function (event) {
@@ -62,11 +64,8 @@ ChatEngine.on('$.ready', (data) => {
             event.preventDefault();
         }
     });
-    Array.prototype.remove = function (from, to) {
-        var rest = this.slice((to || from) + 1 || this.length);
-        this.length = from < 0 ? this.length + from : from;
-        return this.push.apply(this, rest);
-    };
+
+
 
     $("#randomButton").click(function () {
         postSelectionToServer();
@@ -111,11 +110,12 @@ ChatEngine.on('$.ready', (data) => {
 
 });
 function ajaxPost(name, value) {
+    //Initiate AJAX Request to local server: serverSide.php
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "http://localhost/~miemie/serverSide.php", false);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhttp.send(name + "=" + value);
-    console.log(xhttp.responseText);
+    //console.log(xhttp.responseText);
 }
 function postSelectionToServer() {
 

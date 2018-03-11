@@ -28,7 +28,4 @@ if (isset($_POST['Hobby'])) {
     //No selection, search for all
     $hobby = 'default';
 }
-echo $age;
-echo $sex;
-echo $hobby;
 
