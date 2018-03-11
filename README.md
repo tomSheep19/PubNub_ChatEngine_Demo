@@ -32,6 +32,17 @@ to invite another user to join the secret channel
 
 - Video: https://www.youtube.com/watch?v=Wsr_T4riEtA&feature=youtu.be
 
+- Images
+![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/1.png)
+
+![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/2.png)
+
+![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/3.png)
+
+![image](https://github.com/tomSheep19/ReadMe_Imgs/blob/master/4.png)
+
+
+
 # Steps
 
 - 1. Configure Environment: NodeJS->Bootstrap->jQuery->Chat Engine SDK
