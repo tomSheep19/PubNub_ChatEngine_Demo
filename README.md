@@ -7,13 +7,14 @@ Randomly Customized Match up chats
 # Updated on Mar 10:
 
 Configure local Apache Server to handle the AJAX request to send selected Sex, Age, Hobby features' value
-
+# Info
 SDK and Source: https://www.pubnub.com/products/chatengine/
 
 Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
 
 Video: https://www.youtube.com/watch?v=77ocoSlIVY4
 
+# Steps
 
 1. Configure Environment: NodeJS->Bootstrap->jQuery->Chat Engine SDK
 
@@ -22,6 +23,8 @@ Video: https://www.youtube.com/watch?v=77ocoSlIVY4
 The whole page contains message area, input boxes, selection area and a start Matching button.
 
 3. Whenever user joined the chat room, I will record them as objects in an ArrayList, I called it as a ‘Pool’.
+
+# The Next
 
 My idea is giving tags to those people in the chat room(e.g: male/female; like sports/like watching films or some other customized feature), then randomly match people with their tags into a private chat room. When the scale of data is huge, something interesting would happen.
 
