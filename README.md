@@ -15,7 +15,8 @@ Local Test Info:
 
 ### Strategy of creating new Private chat between two selected users:
 
-- After clicking on the 'Start Anonymous Chat' button, current user's browser would open a new page called 'private-chat'.(implemented)
+- After clicking on the 'Start Anonymous Chat' button, current user's browser would open a new page called 'private-chat'.
+
 - Then by using:
 
 `let secretChat = new ChatEngine.Chat('secret-channel'); `
@@ -30,7 +31,7 @@ to invite another user to join the secret channel
 
 - Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
 
-- Video: https://www.youtube.com/watch?v=z5DSEXSlEVs&feature=youtu.be
+- Video: https://www.youtube.com/watch?v=z5DSEXSlEVs
 
 - Images
 ### Multi-Users Chat Room (Named as user A)
