@@ -115,9 +115,9 @@ function ajaxPost(name, value) {
     xhttp.open("POST", "http://localhost/~miemie/serverSide.php", false);
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhttp.send(name + "=" + value);
+    console.log(xhttp.responseText);
 }
 function postSelectionToServer() {
-    //var conceptName = $('#aioConceptName').find(":selected").text();
 
     var sex = $('#Sex').find(":selected").text();
     var age = $('#Age').find(":selected").text();

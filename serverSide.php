@@ -15,18 +15,20 @@ if (isset($_POST['Sex'])) {
 
 
 if (isset($_POST['Age'])) {
-    $sex = $_POST['Age'];
+    $age = $_POST['Age'];
 } else {
     //No selection, search for all
-    $sex = 'default';
+    $age = 'default';
 }
 
 
 if (isset($_POST['Hobby'])) {
-    $sex = $_POST['Hobby'];
+    $hobby = $_POST['Hobby'];
 } else {
     //No selection, search for all
-    $sex = 'default';
+    $hobby = 'default';
 }
-
+echo $age;
+echo $sex;
+echo $hobby;
 
