@@ -8,7 +8,6 @@ Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-sea
 
 Video: https://www.youtube.com/watch?v=77ocoSlIVY4
 
-Update Mar 10: Add form submission feature
 
 1. Configure Environment: NodeJS->Bootstrap->jQuery->Chat Engine SDK
 
