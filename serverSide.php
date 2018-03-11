@@ -10,7 +10,7 @@ if (isset($_POST['Sex'])) {
     $sex = $_POST['Sex'];
 } else {
     //No selection, search for all
-    $sex = 'default';
+  //  $sex = 'default';
 }
 
 
@@ -28,4 +28,6 @@ if (isset($_POST['Hobby'])) {
     //No selection, search for all
     $hobby = 'default';
 }
+
+
 
