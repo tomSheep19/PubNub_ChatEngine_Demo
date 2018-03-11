@@ -13,12 +13,12 @@ Local Test Info:
 - Copy serverSide.php to Apache Server
 - Then start serverSide.php first
 
-## Upcoming feature
+## Features
 
 ### Strategy of creating new Private chat between two selected users:
 
 - After clicking on the 'Start Anonymous Chat' button, current user's browser would open a new page called 'private-chat'.(implemented)
-- Meanwhile, current page (we call index.html) would send a request to PHP server with a json including information of these two user in the new chatroom. (implented)
+- Meanwhile, current page (we call index.html) would send a request to PHP server with a json including information of these two user in the new chatroom. (implemented)
 - Then the PHP server would redirect another user's page to this new 'private-chat' room. (implementing)
 
 
@@ -41,13 +41,13 @@ The whole page contains message area, input boxes, selection area and a start Ma
 
 - 3. Whenever user joined the chat room, I will record them as objects in an ArrayList, I called it as a ‘Pool’.
 
-My idea is giving tags to those people in the chat room(e.g: male/female; like sports/like watching films or some other customized feature), then randomly match people with their tags into a private chat room. When the scale of data is huge, something interesting would happen.
+    My idea is giving tags to those people in the chat room(e.g: male/female; like sports/like watching films or some other customized features), then randomly match people with their tags into a private chat room. When the scale of data is huge, something interesting would happen.
 
 Whenever the user clicks on the start button to search matches, if there is only one user in the pool, the page would send an alert to the user, so that the user need to wait.
 
 - 4. When there would be a target(s) in the pool, a page would turn into a new tab called private chat, which contains only 2 people(our matches).
 
-# The Next
+# The Next Steps:
 
 What to do next:
 
