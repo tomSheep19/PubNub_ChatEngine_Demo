@@ -17,9 +17,9 @@ Local Test Info:
 
 ### Strategy of creating new Private chat between two selected users:
 
-- After clicking on the Start Anonymous button, current user's would open a new page called 'private-chat'. 
-- Meanwhile, current page (we call index.html) would send a request to PHP server with a json including information of these two user in the new chatroom. 
-- Then the PHP server would redirect another user's page to this new 'private-chat' room.
+- After clicking on the 'Start Anonymous Chat' button, current user's browser would open a new page called 'private-chat'.(implemented)
+- Meanwhile, current page (we call index.html) would send a request to PHP server with a json including information of these two user in the new chatroom. (implented)
+- Then the PHP server would redirect another user's page to this new 'private-chat' room. (implementing)
 
 
 
