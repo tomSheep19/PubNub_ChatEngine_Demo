@@ -21,6 +21,7 @@ Local Test Info:
 - Then by using:
 
 `let secretChat = new ChatEngine.Chat('secret-channel'); `
+
 `secretChat.invite(someoneElse);`
 
 to invite another user to join the secret channel
