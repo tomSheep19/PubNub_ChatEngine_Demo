@@ -13,6 +13,17 @@ Local Test Info:
 - Copy serverSide.php to Apache Server
 - Then start serverSide.php first
 
+## Upcoming feature
+
+### Strategy of creating new Private chat between two selected users:
+
+- After clicking on the Start Anonymous button, current user's would open a new page called 'private-chat'. 
+- Meanwhile, current page (we call index.html) would send a request to PHP server with a json including information of these two user in the new chatroom. 
+- Then the PHP server would redirect another user's page to this new 'private-chat' room.
+
+
+
+
 # Info
 SDK and Source: https://www.pubnub.com/products/chatengine/
 
