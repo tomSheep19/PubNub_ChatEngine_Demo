@@ -5,12 +5,11 @@ const ChatEngine = ChatEngineCore.create({
 var id = window.location.href.split('?').pop();
 var first = id.split('+')[0];
 var second = id.split('+')[1];
+
+//Redirect second one's browser to current page(Or open a new tab)
+
 //console.log(first);
 //console.log(second);
-const getUsername = () => {
-    const usrs = ['SpiderMan', 'Yang', 'Thor', 'BlackWidow', 'CaptainMarvel', 'Medusa', 'IronMan', 'Hulk'];
-    return usrs[Math.floor(Math.random() * usrs.length)];
-};
 
 const getColor = () => {
     const colors = ["red", "orange", "yellow", "green", "blue", "purple", "teal"];
@@ -37,30 +36,16 @@ ChatEngine.on('$.ready', (data) => {
 
     let me = data.me;
 
-    let chat = new ChatEngine.Chat('new-chat');
-
-    chat.on('$.online.here', (payload) => {
-        if (payload.user.uuid != first && payload.user.uuid != second) {
-            return;
-        }
-        appendMessage('Status', payload.user.uuid + ' is in the channel!');
-    });
-
-    chat.on('$.online.join', (payload) => {
-        if (payload.user.uuid != first && payload.user.uuid != second) {
-            return;
-        }
-        appendMessage('Status', payload.user.uuid + ' has come online!');
-    });
-
+    let chat = new ChatEngine.Chat('private-chat');
 
     chat.on('message', (payload) => {
         console.log(payload);
-        if (payload.sender.uuid != first && payload.sender.uuid != second) {
-            return;
+        if(payload.sender.uuid!= first && payload.sender.uuid!=second){
+            return ;
         }
         appendMessage(payload.sender.uuid, payload.data.text, "black");
     });
+
 
 
     $("#message").keypress(function (event) {
