@@ -4,7 +4,7 @@ Randomly Customized Match up chats
 
 #Supperted by Pub Bub Chat Engine SDK
 
-#Updated on Mar 10:
+# Updated on Mar 10:
 
 Configure local Apache Server to handle the AJAX request to send selected Sex, Age, Hobby features' value
 
