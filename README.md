@@ -10,6 +10,8 @@ Configure local Apache Server to handle the AJAX request to send selected Sex, A
 
 Local Test Info: Put all the stuff in local Apache Server 
 
+Then start serverSide.php first
+
 # Info
 SDK and Source: https://www.pubnub.com/products/chatengine/
 
