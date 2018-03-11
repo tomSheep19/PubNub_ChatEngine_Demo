@@ -17,6 +17,8 @@ const appendMessage = (username, text) => {
 
     $('#log').append(message);
     $("#log").animate({scrollTop: $('#log').prop("scrollHeight")}, "slow");
+    // $("#log").animate({color:color},1000);
+
 };
 
 const appendPrivateMessage = (username, text) => {
@@ -56,6 +58,7 @@ ChatEngine.on('$.ready', (data) => {
             appendPrivateMessage(payload.sender.uuid, payload.data.text);
         });
         $('#privateLog').append("Now you are in a Private Chat with " + globalUsr );
+        console.log(secretChat);
         $("#privateMessage").keypress(function (event) {
             if (event.which == 13) {
                 secretChat.emit('message', {
@@ -131,11 +134,12 @@ ChatEngine.on('$.ready', (data) => {
             //initiate newChat
             alert("Found! Your peer now is: " + pickedUsr);
 
+            globalUsr = pickedUsr;
             //Redirect pickedUsr's page to the privatepage
             //console.log(chat);
             let secretChat = new ChatEngine.Chat('secret-channel');
             var usr = new ChatEngine.User(pickedUsr,secretChat);
-            globalUsr = pickedUsr;
+
             secretChat.invite(usr);
             console.log('Sec');
             console.log(secretChat);

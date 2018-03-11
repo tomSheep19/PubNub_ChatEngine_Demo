@@ -12,6 +12,7 @@ var second = id.split('+')[1];
 //console.log(second);
 
 
+
 const appendMessage = (username, text) => {
     let message =
         $(`<div class="list-group-item" />`)
@@ -24,7 +25,7 @@ const appendMessage = (username, text) => {
 
 };
 
-let me = ChatEngine.connect(first, null);
+let me = ChatEngine.connect(second, null);
 
 
 ChatEngine.on('$.ready', (data) => {
@@ -33,7 +34,7 @@ ChatEngine.on('$.ready', (data) => {
 
     //let chat = new ChatEngine.Chat('private-chat');
     let chat = new ChatEngine.Chat('secret-channel');
-    var usr = new ChatEngine.User(second, chat);
+    var usr = new ChatEngine.User(second,chat);
     chat.invite(usr);
     console.log('private-chat-info');
     console.log(chat);
@@ -59,6 +60,7 @@ ChatEngine.on('$.ready', (data) => {
          }*/
         appendMessage(payload.sender.uuid, payload.data.text);
     });
+
 
 
     $("#message").keypress(function (event) {
