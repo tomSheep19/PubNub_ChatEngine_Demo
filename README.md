@@ -4,7 +4,7 @@ PubNub_ChatEngine_Demo  Randomly Customized Match up chats
 ------
 #Supperted by Pub Bub Chat Engine SDK
 
-# Updated on Mar 10:
+## Updated on Mar 10:
 
 Configure local Apache Server to handle the AJAX request to send selected Sex, Age, Hobby features' value
 
@@ -12,8 +12,6 @@ Local Test Info:
 - Put the folder into local Apache Server
 - Copy serverSide.php to Apache Server
 - Then start serverSide.php first
-
-## Features
 
 ### Strategy of creating new Private chat between two selected users:
 
@@ -27,15 +25,12 @@ Local Test Info:
 to invite another user to join the secret channel
  
 
-
-
-
 # Info
-SDK and Source: https://www.pubnub.com/products/chatengine/
+- SDK and Source: https://www.pubnub.com/products/chatengine/
 
-Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
+- Blog: https://medium.com/@tomsheep19/pubnub-chat-engine-demo-with-customized-searching-and-randomly-match-up-chats-e84e76919fa1
 
-Video: https://www.youtube.com/watch?v=77ocoSlIVY4
+- Video: https://www.youtube.com/watch?v=Wsr_T4riEtA&feature=youtu.be
 
 # Steps
 
