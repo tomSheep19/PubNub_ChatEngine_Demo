@@ -2,7 +2,7 @@ PubNub_ChatEngine_Demo
 ====
 PubNub_ChatEngine_Demo  Randomly Customized Match up chats
 ------
-#Supperted by Pub Bub Chat Engine SDK
+#Supperted by Pub Nub Chat Engine SDK
 
 ## Updated on Mar 10:
 
